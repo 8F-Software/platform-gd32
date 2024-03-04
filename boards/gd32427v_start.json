@@ -1,0 +1,55 @@
+{
+    "build": {
+        "core": "gd32",
+        "cpu": "cortex-m4",
+        "extra_flags": "-DGD32F427xK -DGD32F4 -DGD32F4xx -DGD32F427",
+        "f_cpu": "200000000L",
+        "hwids": [
+            [
+                "0x28E9",
+                "0x0189"
+            ]
+        ],
+        "mcu": "gd32f427vkt6",
+        "product_line": "GD32F427xK",
+        "spl_series": "GD32F4xx",
+        "series": "GD32F427"
+    },
+    "debug": {
+        "default_tools": [
+            "cmsis-dap"
+        ],
+        "jlink_device": "GD32F427VK",
+        "onboard_tools": [
+            "cmsis-dap"
+        ],
+        "openocd_target": "stm32f4x",
+        "openocd_extra_pre_target_args" : ["-c", "set CPUTAPID 0x2ba01477"],
+        "svd_path": "GD32F4xx.svd"   
+    },
+    "frameworks": [
+        "spl",
+        "cmsis"
+    ],
+    "name": "GD32427V-START (192k RAM. 3072k Flash)",
+    "upload": {
+        "disable_flushing": false,
+        "maximum_ram_size": 262144, "this_might_be_wrong":0,
+        "closely_coupled_ram_size": 65536,
+        "maximum_size": 3145728,
+        "protocol": "cmsis-dap",
+        "protocols": [
+            "jlink",
+            "cmsis-dap",
+            "stlink",
+            "blackmagic",
+            "serial",
+            "dfu"
+        ],
+        "require_upload_port": true,
+        "use_1200bps_touch": false,
+        "wait_for_upload_port": false
+    },
+    "url": "https://www.gigadevice.com/microcontroller/gd32f427vkt6/",
+    "vendor": "GigaDevice"
+}
